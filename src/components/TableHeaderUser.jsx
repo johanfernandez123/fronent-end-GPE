@@ -9,7 +9,7 @@ const TableHeaderUser = () => {
                 <p className="text-white vh-width20 text-center">Direccion Entrega</p>
                 <p className="text-white vh-width20 text-center">Estado</p>
                 <p className="text-white vh-width20 text-center">Editar</p>
-                <p className="text-white vh-width20 text-center">Cancelar</p>
+                <p className="text-white vh-width20 text-center">Cancelar/Activar</p>
                 <p className="text-white vh-width20 text-center">Novedad</p>
             </div>
         </>

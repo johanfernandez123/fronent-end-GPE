@@ -42,9 +42,14 @@ body{
     color: rgba(255, 255, 255, 0.644);
 }
 
+.btn-nav{
+    background: none;
+    padding: 0;
+    border: 0;
+}
 .text-color-white-hover:hover{
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff !important;
     font-size: 1.30rem !important;
 }
 

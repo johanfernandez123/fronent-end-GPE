@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-
+import useAuth from "../hooks/useAuth"
 const HeaderAdmin = () => {
+    const {cerrarSesion} = useAuth()
   return (
     <>
     <nav className="navbar navbar-expand-lg px-5 bg-color-unico">
@@ -30,7 +31,8 @@ const HeaderAdmin = () => {
 
                     </li>
                     <li className="nav-item">
-                        <Link to="/admin/profile"  className="mx-4 px-2 fs-5 text-color-white-claro text-color-white-hover enlace" >Cerrar Sesion</Link>
+                        <button>Cerrar Sesion</button>
+                        {/* <Link to="/admin/profile"  className="mx-4 px-2 fs-5 text-color-white-claro text-color-white-hover enlace" >Cerrar Sesion</Link> */}
                     </li>
 
                 </ul>
