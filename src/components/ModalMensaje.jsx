@@ -12,6 +12,7 @@ function ModalMensaje({ show, handleClose, orden }) {
     await crearMensaje({msg, orden})
     setMsg('')
   }
+
   return (
     <>
       <Modal show={show} onHide={handleClose} backdrop={false} size="lg">
@@ -27,6 +28,7 @@ function ModalMensaje({ show, handleClose, orden }) {
                 <Mensaje
                   key={index}
                   mensaje={elem.mensaje}
+                  creador={elem.creador}
                 />
 
               )}

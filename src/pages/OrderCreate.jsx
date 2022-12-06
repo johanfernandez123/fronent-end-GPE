@@ -21,7 +21,9 @@ const OrderCreate = () => {
   const [direccion_entrega, setDireccion_entrega] = useState('')
   const [ciudad_entrega, setCiudad_entrega] = useState('')
   const [id, setId] = useState(orden._id);
+  
   useEffect(() => {
+
     if (orden?._id) {
       setFecha(orden.fecha);
       setHora(orden.hora);

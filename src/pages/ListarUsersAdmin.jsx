@@ -1,7 +1,20 @@
+import { useEffect,useState } from "react";
 import TableHeaderAdmin from "../components/TableHeaderAdmin";
 import TableBodyAdmin from "../components/TableBodyAdmin";
+import useAdmin from "../hooks/useAdmin";
+
 const ListarUsersAdmin = ({admin}) => {
-    const array = [1, 2, 3, 4, 5];
+    const {repartidores, administradores} = useAdmin();
+    const [listado, setListado] = useState([]);
+
+    useEffect(() => {
+        if(admin){
+            setListado(administradores)
+        }else{
+            setListado(repartidores)
+        }
+    },[admin,repartidores,administradores])
+
     return (
       <>
       <h1 className="text-center py-4 text-uppercase fw-bold color-unico" >{admin?"Listado de Administradores":"Listado de Repartidores"}</h1>
@@ -12,21 +25,19 @@ const ListarUsersAdmin = ({admin}) => {
                       <div className="d-flex  justify-content-around flex-column">
                           {
                               <>
-                                  {array.map(elem => 
+                                  {listado.map(elem => 
                                       <TableBodyAdmin
-                                          key={elem}
-                                          cedula={"1041530468"}
-                                          nombres={"JOhan Camilo Fernandez"}
-                                          celular={"3227261710"}
-                                          correo={"johanfg32@gmail.com"}
+                                          key={elem._id}
+                                          cedula={elem.nit}
+                                          nombres={elem.nombre}
+                                          celular={elem.celular}
+                                          correo={elem.email}
+                                          _id ={elem._id}
                                       />
                                   
                                   )}
                               </>
-                          }
-  
-  
-  
+                          }  
                       </div>
                   </div>
               </div>

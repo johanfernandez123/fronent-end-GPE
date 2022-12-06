@@ -12,50 +12,21 @@ const ModalVerMas = ({ showMas, handleCloseMas, orden }) => {
                 </Modal.Header>
                 <Modal.Body>
 
-                    <p># Servicio: {orden.nServicio}</p>
-                    <p>Fecha: {orden.fecha}</p>
-                    <p>Hora: {orden.hora}</p>
-
-                    hora
-                    :
-                    "Mañana"
-                    delicado
-                    :
-                    false
-                    largo
-                    :
-                    30
-                    ancho
-                    :
-                    10
-                    alto
-                    :
-                    20
-                    peso
-                    :
-                    20
-                    direccion_Recogida
-                    :
-                    "Calle 22"
-                    ciudad_Recogida
-                    :
-                    "Medellin"
-                    nombre_destinatario
-                    :
-                    "Johan"
-                    nit_destinatario
-                    :
-                    "1041530468"
-                    direccion_entrega
-                    :
-                    "Calle 23"
-                    ciudad_entrega
-                    :
-                    "Betulia"
-                    estado
-                    :
-                    "entregado"
-                    {orden._id}
+                    <p className='text-center'># Servicio: {orden.nServicio}</p>
+                    <p className='text-center'>Fecha: {orden.fecha}</p>
+                    <p className='text-center'>Hora: {orden.hora}</p>
+                    <p className='text-center'>Delicado: {orden.delicado?'Si':'No'}</p>
+                    <p className='text-center'>Largo: {orden.largo}</p>
+                    <p className='text-center'>Ancho: {orden.ancho}</p>
+                    <p className='text-center'>Alto: {orden.alto}</p>
+                    <p className='text-center'>Peso: {orden.peso}</p>
+                    <p className='text-center'>Direccion_Recogida: {orden.direccion_Recogida}</p>
+                    <p className='text-center'>Ciudad de Recogida: {orden.ciudad_Recogida}</p>
+                    <p className='text-center'>Nombre del Destinatario: {orden.nombre_destinatario}</p>
+                    <p className='text-center'>Nit del Destinatario: {orden.nit_destinatario}</p>
+                    <p className='text-center'>Direccion de Entrega: {orden.direccion_entrega}</p>
+                    <p className='text-center'>Ciudad de Entrega: {orden.ciudad_entrega}</p>
+                    <p className='text-center'>Estado: {orden.estado}</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseMas}>

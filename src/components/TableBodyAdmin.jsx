@@ -1,6 +1,9 @@
+import useAdmin from "../hooks/useAdmin"
 
 const TableBodyAdmin = (props) => {
-    const {cedula,nombres,celular,correo} = props
+    const {buscarUsuario} = useAdmin();
+    
+    const {cedula,nombres,celular,correo,_id} = props
     return (
       <>
            <div className="d-flex  justify-content-around w-100 mod-991">
@@ -22,7 +25,9 @@ const TableBodyAdmin = (props) => {
                   </p>
                  
                   <p className="text-white vh-width20 text-center">
-                      <button className="btn btn-outline-danger border-0 p-1">
+                      <button
+                      onClick={() => buscarUsuario(_id)}
+                      className="btn btn-outline-danger border-0 p-1">
                       <i className="text-white fs-3 fa-sharp fa-solid fa-pen-to-square"></i>
                       </button>
                   </p>

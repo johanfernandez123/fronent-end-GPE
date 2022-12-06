@@ -57,7 +57,7 @@ function Login() {
 
             localStorage.setItem('token', data.token);
             setAuth(data)
-            limpiarInputs()
+            limpiarInputs();
            return navigate(redireccionar(data.rol))
         } catch (error) {
             console.log(error);
@@ -98,6 +98,7 @@ function Login() {
                                 type="password"
                                 placeholder="Esciba su contraseña"
                                 value={password}
+                                autoComplete="off"
                                 onChange={e => setPassword(e.target.value)}
                             />
                         </div>

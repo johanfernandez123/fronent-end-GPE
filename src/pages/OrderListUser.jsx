@@ -8,7 +8,7 @@ const OrderListUser = () => {
         <>
             <h1 className="text-center py-4 text-uppercase fw-bold color-unico" >Listado de ordenes</h1>
 
-            <div className="mt-3  d-flex flex-column align-items-center bg-color-unico rounded-4 mb-5 mod-991-container">
+            <div className="mt-3 w-75 d-flex flex-column align-items-center bg-color-unico rounded-4 mb-5 mod-991-container">
                 <div className="w-100 py-2 px-4">
                     <TableHeaderUser />
 
